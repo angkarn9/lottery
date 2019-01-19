@@ -1,15 +1,23 @@
-<div>
+<div class="container">
+  <div class="lotto-header">
+    <h1>ตรวจล็อตเตอรี่</h1>
+  </div>
+  <div>
   <form [formGroup]="criterSearchForm">
-    <div>งวดประจำวันที่ : 
-      <select formControlName="periodDate">
+    <div class="form-group">
+      <label for="periodDate">งวดประจำวันที่ : </label>
+      <select class="form-control" formControlName="periodDate" id="periodDate">
         <option *ngFor="let period of periodDateList" value="period.value">{{period.desc}}</option>
       </select>
     </div>
-    <div>
-      เลขล็อตเตอรี่ : <input type="number" formControlName="lottoNumber"/>
-      <span *ngIf="resultMessage" [innerHTML]="resultMessage"></span>
+    <div class="form-group">
+      <label for="lottoNumber">เลขล็อตเตอรี่ : </label>
+      <input type="number" class="form-control" formControlName="lottoNumber" id="lottoNumber" />
     </div>
-    <div>
+    <div class="form-group">
+      <label *ngIf="resultMessage" [innerHTML]="resultMessage"></label>
+    </div>
+    <div class="form-group">
       <button (click)="onSearch()">ตรวจ</button>&nbsp;<button (click)="onClear()">ล้าง</button>
     </div>
   </form>
