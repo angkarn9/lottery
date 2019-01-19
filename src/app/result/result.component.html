@@ -1,0 +1,5 @@
+<h1>ผลการตรวจราลวัล</h1>
+<li *ngFor="let result of resultObservable | async as result;">
+  <span id="description">{{result.description}}</span><br>
+  <span id="result">{{result.result}}</span>
+</li>
