@@ -1,3 +1,9 @@
 .lotto-header {
     margin-top: 20px;
 }
+
+@media (min-width: 425px) {
+    .lotto-container {
+        max-width: 425px;
+    }
+}

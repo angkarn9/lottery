@@ -7,6 +7,8 @@ import { LottoComponent } from './lotto/lotto.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ResultComponent } from './result/result.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

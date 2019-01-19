@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Dropdown } from './model/dropdown';
+import { faSadTear } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-lotto',
@@ -12,6 +13,7 @@ export class LottoComponent implements OnInit {
   criterSearchForm: FormGroup;
   periodDateList: Dropdown[];
   resultMessage: string;
+  sadTear = faSadTear;
 
   constructor(
     private fb: FormBuilder
@@ -34,7 +36,7 @@ export class LottoComponent implements OnInit {
       return;
     }
 
-    this.resultMessage = 'คุณถูกหวย';
+    this.resultMessage = 'เสียใจด้วย';
   }
 
   onClear() {

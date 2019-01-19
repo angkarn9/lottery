@@ -1,26 +1,32 @@
-<div class="container">
+<div class="container lotto-container">
   <div class="lotto-header">
     <h1>ตรวจล็อตเตอรี่</h1>
   </div>
   <div>
-  <form [formGroup]="criterSearchForm">
-    <div class="form-group">
-      <label for="periodDate">งวดประจำวันที่ : </label>
-      <select class="form-control" formControlName="periodDate" id="periodDate">
-        <option *ngFor="let period of periodDateList" value="period.value">{{period.desc}}</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="lottoNumber">เลขล็อตเตอรี่ : </label>
-      <input type="number" class="form-control" formControlName="lottoNumber" id="lottoNumber" />
-    </div>
-    <div class="form-group">
-      <label *ngIf="resultMessage" [innerHTML]="resultMessage"></label>
-    </div>
-    <div class="form-group">
-      <button (click)="onSearch()">ตรวจ</button>&nbsp;<button (click)="onClear()">ล้าง</button>
-    </div>
-  </form>
+    <form [formGroup]="criterSearchForm">
+      <div class="form-group">
+        <label for="periodDate">งวดประจำวันที่ : </label>
+        <select class="form-control" formControlName="periodDate" id="periodDate">
+          <option *ngFor="let period of periodDateList" [value]="period.value">{{period.desc}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="lottoNumber">เลขล็อตเตอรี่ : </label>
+        <input type="number" class="form-control" formControlName="lottoNumber" id="lottoNumber" />
+      </div>
+      <div *ngIf="resultMessage" class="form-group">
+        <label [innerHTML]="resultMessage"></label>&nbsp;
+        <fa-icon [icon]="sadTear"></fa-icon>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <button type="button" class="btn btn-primary btn-block" (click)="onSearch()">ตรวจ</button>
+        </div>
+        <div class="col-sm-6 form-group">
+          <button type="button" class="btn btn-secondary btn-block" (click)="onClear()">ล้าง</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <lottery-result></lottery-result>
 </div>
-
-<lottery-result></lottery-result>

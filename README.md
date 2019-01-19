@@ -29,8 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Dependency
 How to add Bootstrap
-```npm install bootstrap font-awesome
+```npm install bootstrap
 
 ```file src/styles.scss
 @import "~bootstrap/dist/css/bootstrap.css";
-@import "~font-awesome/css/font-awesome.css";
+
+https://fontawesome.com/how-to-use/on-the-web/using-with/angular
