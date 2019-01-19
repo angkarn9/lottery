@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LottoComponent } from './lotto/lotto.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ResultComponent } from './result/result.component';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +17,8 @@ import { ResultComponent } from './result/result.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
